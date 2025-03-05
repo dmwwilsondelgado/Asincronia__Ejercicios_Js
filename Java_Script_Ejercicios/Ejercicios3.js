@@ -5,48 +5,44 @@
 // • lo pushee a un nuevo array
 // • devuelva el array final con el resultado de cada una de las llamadas al callback.
 
-
-// function map(array,callback) {
-//     // let array = [1,2,3,4,5,6,7,8,9,10];
-//     let array = [];
-//     let resultadoCallback = [];
-//     for (let i = 0; i < array.length; i++) {
-//         resultadoCallback.push(callback(array[i]));
-//     }
-//     return resultadoCallback;
-// }
-// function callback(elemento){
-//     return elemento * 2;
-// }
-
-// let resutadosFinales = map(array,callback);
-// console.log(resutadosFinales);
+// ----------------------------------------------------------------------------------------------------------------
 
 
 
-// function ingresoArray(numero){
-//     let array = [];
-//     array.push(numero);
-//     return array;
-// }
 
-function agregarHttp (url){
-    return "http://" + url;
+function map(array,callback) {
+    let Newarray = [];
+    for (let i = 0;i <array.length;i++){
+        Newarray.push/(callback(array[i]));
+    }
+    return Newarray;
+}
+
+const ingreso = prompt("ingrese numeros separados por comas");
+const  numbers = ingreso.split(",").map(num => parseInt(num.trim()));
+const double = map(numbers,num => num * 2);
+alert("Numeros duplicados" + double.join(","));
+alert("Numeros ingresados" + numbers.join(","));
+console.log("Numeros duplicados" + double.join(","));
+console.log("Numeros ingresados" + numbers.join(","));
+
+
+
+function agregar(numero){
+    return "Ests son los" + numero;
+};
+
+function procesar (unArray,callback){let numerosTelefonos = [];
+for (let i = 0; i<unArray.length; i++){
+    numerosTelefonos.push(callback,unArray)
+} return numerosTelefonos;
 };
 
 
-function procesar (unArray,callback){
-    let sitiosWeb = [];
-for (let i = 0; i<unArray.length; i ++){
-    sitiosWeb.push(callback,unArray)
-} return sitiosWeb;
-};
+let resultados = (unArray, callback) => [callback(unArray)];
 
-let sitioWebCompleto = (unArray, callback) => [callback(unArray)];
+// function resultados (unArray, callback){
+//     return callback + unArray
+// }
 
-/* function sitioWebCompleto (unArray, callback){
-    return callback + unArray
-} */
-
-
-console.log (sitioWebCompleto(["www.yahoo.com", "www.google.com", "www.git.com"],agregarHttp));
+alert (resultados(["1", "100", "200"], procesar));
