@@ -11,7 +11,7 @@ datosUsuarios().then((datos) => {
     console.log(datos);
 });
 
-fetch('../js/json/ejercicio15.json').then((datos) => {
+fetch('../Java_Script_Ejercicios/Json/Ejercicios15.json').then((datos) => {
     datos.json().then((datosUsuarios) => {
         console.log(datosUsuarios);
     })
